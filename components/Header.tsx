@@ -27,8 +27,8 @@ export default function Header() {
             </Link>
           </div>
           
-          {/* Bulles de navigation centrées */}
-          <div className="flex items-center space-x-3 flex-1 justify-center">
+          {/* Bulles de navigation centrées - Cachées sur mobile */}
+          <div className="hidden md:flex items-center space-x-3 flex-1 justify-center">
             <Link
               href="/"
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -75,8 +75,8 @@ export default function Header() {
             </Link>
           </div>
           
-          {/* Espace pour équilibrer avec le logo */}
-          <div className="flex-shrink-0 w-32"></div>
+          {/* Espace pour équilibrer avec le logo - Caché sur mobile */}
+          <div className="hidden md:block flex-shrink-0 w-32"></div>
         </div>
         
         {/* Mobile Menu Button */}

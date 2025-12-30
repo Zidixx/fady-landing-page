@@ -37,9 +37,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" style={{ background: '#FFFFFF' }}>
-      <body className={uberMove.variable} style={{ background: '#FFFFFF' }}>
-        <div className="relative">
+    <html lang="fr" style={{ background: '#FFFFFF', overflowX: 'hidden' }}>
+      <body className={uberMove.variable} style={{ background: '#FFFFFF', overflowX: 'hidden' }}>
+        <div className="relative overflow-x-hidden">
           <Header />
           <main className="relative">{children}</main>
           <Footer />
