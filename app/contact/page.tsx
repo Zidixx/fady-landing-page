@@ -4,29 +4,41 @@ import { useState } from "react";
 
 export default function Contact() {
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: null, message: '' });
+
     const form = e.currentTarget;
     const formData = new FormData(form);
+    
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
 
     try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ name, email, message }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.ok) {
         setStatus({ type: 'success', message: 'Message envoyé avec succès ! Nous vous répondrons rapidement.' });
         form.reset();
       } else {
-        setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez réessayer.' });
+        setStatus({ type: 'error', message: data.error || 'Une erreur est survenue. Veuillez réessayer.' });
       }
     } catch (error) {
       setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez réessayer.' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -95,8 +107,6 @@ export default function Contact() {
 
                 {/* Formulaire */}
                 <form
-                  action="https://formspree.io/f/YOUR_FORM_ID"
-                  method="POST"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
@@ -155,9 +165,14 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-fady-purple text-white rounded-full font-bold text-lg hover:bg-fady-purple-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    disabled={isSubmitting}
+                    className={`w-full px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 ${
+                      isSubmitting 
+                        ? 'bg-gray-400 text-white cursor-not-allowed opacity-70' 
+                        : 'bg-fady-purple text-white hover:bg-fady-purple-dark'
+                    }`}
                   >
-                    Envoyer
+                    {isSubmitting ? 'Envoi...' : 'Envoyer'}
                   </button>
                 </form>
               </div>
