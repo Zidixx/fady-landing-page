@@ -8,10 +8,8 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Premium */}
-      <section className="relative pb-20 md:pb-32 lg:pb-40 overflow-hidden min-h-screen" style={{
+      <section className="relative -mt-20 pt-20 pb-20 md:pb-32 lg:pb-40 overflow-hidden min-h-screen" style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
-        marginTop: '-80px',
-        paddingTop: '100px',
       }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16 lg:pt-20">
           <div className="max-w-7xl mx-auto">
@@ -101,7 +99,7 @@ export default function Home() {
                 </svg>
               }
               title="Réservation rapide"
-              description="Trouve et réserve le meilleur coiffeur près de chez toi en quelques secondes."
+              description="Réserve en quelques clics, même dans 10 minutes si un coiffeur est disponible."
             />
             <FeatureCard
               icon={
@@ -327,8 +325,8 @@ export default function Home() {
                 {/* Right: Mockups */}
                 <div className="relative flex items-center justify-center lg:justify-start">
                   <div className="relative w-full max-w-md">
-                    {/* Mockup 1 - Légèrement incliné à gauche - Visible sur mobile et desktop */}
-                    <div className="relative transform md:-rotate-6 md:translate-y-2 animate-float" style={{
+                    {/* Mockup 1 - Légèrement incliné à gauche */}
+                    <div className="relative transform -rotate-6 translate-y-2 animate-float" style={{
                       filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))',
                     }}>
                       <img
@@ -338,8 +336,8 @@ export default function Home() {
                         style={{display: 'block'}}
                       />
                     </div>
-                    {/* Mockup 2 - Légèrement incliné à droite - Caché sur mobile */}
-                    <div className="hidden md:block absolute top-0 right-0 transform rotate-6 -translate-y-2 animate-float-delayed" style={{
+                    {/* Mockup 2 - Légèrement incliné à droite */}
+                    <div className="absolute top-0 right-0 transform rotate-6 -translate-y-2 animate-float-delayed" style={{
                       filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))',
                     }}>
                       <img
