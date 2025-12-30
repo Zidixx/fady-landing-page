@@ -26,8 +26,6 @@ export const metadata: Metadata = {
   description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates. Rejoins la nouvelle génération de coiffeurs.",
   icons: {
     icon: "/logo-onglet.png",
-    shortcut: "/logo-onglet.png",
-    apple: "/logo-onglet.png",
   },
   openGraph: {
     title: "FADY – Réserve ton coiffeur en quelques secondes",
