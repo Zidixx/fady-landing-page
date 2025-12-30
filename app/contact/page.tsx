@@ -228,7 +228,7 @@ export default function Contact() {
 
                     {/* TikTok */}
                     <a
-                      href="https://tiktok.com/@fady.app"
+                      href="https://tiktok.com/@fadyapp"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md group"
@@ -240,7 +240,7 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <div className="text-xs font-medium text-gray-text mb-1">TikTok</div>
-                        <div className="text-base font-semibold text-black-soft">@fady.app</div>
+                        <div className="text-base font-semibold text-black-soft">@fadyapp</div>
                       </div>
                     </a>
                   </div>
