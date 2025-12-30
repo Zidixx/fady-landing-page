@@ -101,8 +101,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Préparation de l'email
+    const fromAddress = '"FADY" <contact@fady-app.fr>';
+    console.log(`[${timestamp}] Champ from utilisé: ${fromAddress}`);
+    
     const mailOptions = {
-      from: `"FADY" <${smtpUser}>`,
+      from: fromAddress,
       to: finalRecipient,
       replyTo: email,
       subject: `[FADY] Nouveau message de contact`,
