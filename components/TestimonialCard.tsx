@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 interface TestimonialCardProps {
   name: string;
   location: string;
@@ -26,7 +24,7 @@ export default function TestimonialCard({ name, location, rating, text, avatar }
           boxShadow: '0 4px 12px rgba(160, 30, 217, 0.2)',
         }}>
           {avatar ? (
-            <Image 
+            <img 
               src={avatar} 
               alt={name} 
               width={48}
