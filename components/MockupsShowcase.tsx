@@ -42,7 +42,7 @@ export default function MockupsShowcase() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Desktop: 3 phones with depth */}
+          {/* Desktop: 3 phones with depth - Layout original inchangé */}
           <div className="hidden md:flex items-end justify-center gap-6 lg:gap-12 relative min-h-[600px]">
             {/* Left Phone - Slightly rotated and behind */}
             <div className="relative w-[200px] lg:w-[240px] transform -rotate-[8deg] translate-y-12 opacity-85 z-10 transition-transform duration-300 hover:scale-105">
@@ -102,25 +102,75 @@ export default function MockupsShowcase() {
             </div>
           </div>
 
-          {/* Mobile: 1 phone centered */}
-          <div className="md:hidden flex items-center justify-center py-8">
-            <div className="relative w-[240px] z-20">
-              <div 
-                className="relative"
-                style={{
-                  filter: 'drop-shadow(0 35px 70px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 60px rgba(188, 49, 252, 0.3))',
-                }}
-              >
-                <Image
-                  src="/mockup-pro.png"
-                  alt="FADY Pro App"
-                  width={240}
-                  height={520}
-                  className="w-full h-auto"
-                  priority
-                />
+          {/* Mobile: Carousel horizontal avec les 3 mockups */}
+          <div className="md:hidden w-full pb-8">
+            <div className="px-4 pb-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide" style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch',
+            }}>
+              <div className="flex gap-4 items-center relative" style={{ minWidth: 'max-content' }}>
+                {/* Mockup gauche */}
+                <div className="flex-shrink-0 snap-center relative">
+                  <Image
+                    src="/mockup-pro-left.png"
+                    alt="FADY Pro App"
+                    width={200}
+                    height={440}
+                    className="w-[200px] h-auto"
+                    priority
+                  />
+                  {/* Flèche droite */}
+                  <div className="absolute top-1/2 -right-6 transform -translate-y-1/2 text-fady-purple/40">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Mockup central - Plus grand */}
+                <div className="flex-shrink-0 snap-center relative">
+                  <Image
+                    src="/mockup-pro.png"
+                    alt="FADY Pro App"
+                    width={240}
+                    height={520}
+                    className="w-[240px] h-auto"
+                    priority
+                  />
+                  {/* Flèche droite */}
+                  <div className="absolute top-1/2 -right-6 transform -translate-y-1/2 text-fady-purple/40">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Mockup droit */}
+                <div className="flex-shrink-0 snap-center">
+                  <Image
+                    src="/mockup-pro-right.png"
+                    alt="FADY Pro App"
+                    width={200}
+                    height={440}
+                    className="w-[200px] h-auto"
+                    priority
+                  />
+                </div>
               </div>
             </div>
+            
+            {/* Indicateurs de pagination en dessous */}
+            <div className="flex justify-center items-center gap-2 pb-2">
+              <div className="w-2 h-2 rounded-full bg-white/40"></div>
+              <div className="w-2 h-2 rounded-full bg-white/40"></div>
+              <div className="w-2 h-2 rounded-full bg-white/40"></div>
+            </div>
+            
+            {/* Texte indicatif */}
+            <p className="text-center text-sm text-white/70 pb-2">
+              ← Glisse pour voir plus →
+            </p>
           </div>
         </div>
       </div>

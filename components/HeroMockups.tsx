@@ -4,42 +4,68 @@ export default function HeroMockups() {
   return (
     <div className="relative w-full h-full flex items-center justify-center" style={{ minHeight: '600px' }}>
       {/* Mobile: Carousel horizontal */}
-      <div className="md:hidden w-full px-4 pb-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide" style={{
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none',
-        WebkitOverflowScrolling: 'touch',
-      }}>
-        <div className="flex gap-6 items-center" style={{ minWidth: 'max-content' }}>
-          {/* Mockup gauche */}
-          <div className="flex-shrink-0 snap-center">
-            <img
-              src="/mockup-user-photos.png"
-              alt="FADY User App - Photos"
-              className="w-[240px] h-auto"
-              style={{display: 'block'}}
-            />
-          </div>
-          
-          {/* Mockup central - Plus grand */}
-          <div className="flex-shrink-0 snap-center">
-            <img
-              src="/mockup-user1.png"
-              alt="FADY User App"
-              className="w-[280px] h-auto"
-              style={{display: 'block'}}
-            />
-          </div>
-          
-          {/* Mockup droit */}
-          <div className="flex-shrink-0 snap-center">
-            <img
-              src="/mockup-user-avis.png"
-              alt="FADY User App - Avis"
-              className="w-[240px] h-auto"
-              style={{display: 'block'}}
-            />
+      <div className="md:hidden w-full">
+        <div className="px-4 pb-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide" style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          WebkitOverflowScrolling: 'touch',
+        }}>
+          <div className="flex gap-6 items-center relative" style={{ minWidth: 'max-content' }}>
+            {/* Mockup gauche */}
+            <div className="flex-shrink-0 snap-center relative">
+              <img
+                src="/mockup-user-photos.png"
+                alt="FADY User App - Photos"
+                className="w-[240px] h-auto"
+                style={{display: 'block'}}
+              />
+              {/* Flèche droite */}
+              <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 text-fady-purple/40">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Mockup central - Plus grand */}
+            <div className="flex-shrink-0 snap-center relative">
+              <img
+                src="/mockup-user1.png"
+                alt="FADY User App"
+                className="w-[280px] h-auto"
+                style={{display: 'block'}}
+              />
+              {/* Flèche droite */}
+              <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 text-fady-purple/40">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Mockup droit */}
+            <div className="flex-shrink-0 snap-center">
+              <img
+                src="/mockup-user-avis.png"
+                alt="FADY User App - Avis"
+                className="w-[240px] h-auto"
+                style={{display: 'block'}}
+              />
+            </div>
           </div>
         </div>
+        
+        {/* Indicateurs de pagination en dessous */}
+        <div className="flex justify-center items-center gap-2 pb-4">
+          <div className="w-2 h-2 rounded-full bg-fady-purple/30"></div>
+          <div className="w-2 h-2 rounded-full bg-fady-purple/30"></div>
+          <div className="w-2 h-2 rounded-full bg-fady-purple/30"></div>
+        </div>
+        
+        {/* Texte indicatif */}
+        <p className="text-center text-sm text-gray-text pb-4">
+          ← Glisse pour voir plus →
+        </p>
       </div>
 
       {/* Desktop: Layout original avec positions absolues */}
