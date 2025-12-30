@@ -257,10 +257,10 @@ export default function UserApp() {
                       Télécharger l&apos;app
                     </a>
                     <Link
-                      href="/user"
+                      href="/pro"
                       className="px-6 py-3 bg-transparent text-white rounded-full font-bold text-base border-2 border-white/40 hover:border-white/60 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] text-center"
                     >
-                      Découvrir FADY
+                      Découvrir FADY PRO
                     </Link>
                   </div>
                 </div>

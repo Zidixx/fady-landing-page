@@ -11,24 +11,22 @@ export default function Header() {
 
   return (
     <header 
-      className="sticky md:relative top-0 z-50 pt-4 pb-4 relative"
-      style={{
-        background: 'transparent',
-      }}
+      className="sticky md:relative top-0 z-50 relative"
     >
-      {/* Fond glassmorphism sur mobile uniquement */}
+      {/* Fond dégradé hero sur mobile uniquement */}
       <div 
-        className="absolute inset-0 md:hidden"
+        className="absolute inset-0 md:hidden bg-fady-hero"
         style={{
-          background: 'linear-gradient(135deg, rgba(160, 30, 217, 0.9) 0%, rgba(188, 49, 252, 0.85) 100%)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          boxShadow: '0 4px 20px rgba(91, 24, 153, 0.2)',
+          opacity: 0.95,
+          boxShadow: '0 2px 10px rgba(91, 24, 153, 0.1)',
         }}
       ></div>
       
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex items-center justify-between h-auto">
+      <nav className="container mx-auto px-4 md:px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Mobile: Container avec hauteur fixe */}
+        <div className="flex md:flex items-center justify-between h-16 md:h-auto">
           {/* Logo en haut à gauche */}
           <div className="flex-shrink-0">
             <Link href="/" className="block hover:opacity-80 transition-opacity">
@@ -95,12 +93,12 @@ export default function Header() {
           <div className="hidden md:block flex-shrink-0 w-32"></div>
         </div>
         
-        {/* Mobile Menu Button */}
-        <div className="absolute right-4 top-4 md:hidden">
+        {/* Mobile Menu Button - Aligné à droite */}
+        <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white transition-all hover:bg-white/30"
-            style={{border: "2px solid rgba(255, 255, 255, 0.3)"}}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-fady-purple transition-all hover:bg-white/30"
+            style={{border: "2px solid rgba(188, 49, 252, 0.3)"}}
             aria-label="Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

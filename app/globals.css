@@ -87,6 +87,10 @@
     z-index: 1;
   }
 
+  .bg-fady-hero {
+    background: linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%);
+  }
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
