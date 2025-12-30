@@ -30,10 +30,10 @@ export default function Contact() {
       const data = await response.json();
 
       if (response.ok && data.ok) {
-        setStatus({ type: 'success', message: 'Message envoyé avec succès ! Nous vous répondrons rapidement.' });
+        setStatus({ type: 'success', message: 'Message envoyé ✅' });
         form.reset();
       } else {
-        setStatus({ type: 'error', message: data.error || 'Une erreur est survenue. Veuillez réessayer.' });
+        setStatus({ type: 'error', message: data.error || 'Erreur, réessaie' });
       }
     } catch (error) {
       setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez réessayer.' });
