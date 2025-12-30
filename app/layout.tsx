@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates. Rejoins la nouvelle génération de coiffeurs.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/logo-onglet.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+      { url: "/logo-onglet.png?v=3", type: "image/png", sizes: "32x32" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico?v=3",
+    apple: "/apple-touch-icon.png?v=3",
   },
   openGraph: {
     title: "FADY — L'app pour coiffeurs & barbers nouvelle génération",
