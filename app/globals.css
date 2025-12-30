@@ -103,5 +103,14 @@
   .animate-float-delayed {
     animation: float 8s ease-in-out infinite 1s;
   }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
