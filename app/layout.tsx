@@ -22,13 +22,18 @@ const uberMove = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "FADY – Réserve ton coiffeur en quelques secondes",
+  title: "FADY — L'app pour coiffeurs & barbers nouvelle génération",
   description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates. Rejoins la nouvelle génération de coiffeurs.",
   icons: {
-    icon: "/logo-onglet.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo-onglet.png", type: "image/png", sizes: "32x32" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "FADY – Réserve ton coiffeur en quelques secondes",
+    title: "FADY — L'app pour coiffeurs & barbers nouvelle génération",
     description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates.",
     type: "website",
   },
