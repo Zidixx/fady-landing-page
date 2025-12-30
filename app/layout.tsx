@@ -22,7 +22,7 @@ const uberMove = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "FADY — L'app pour coiffeurs & barbers nouvelle génération",
+  title: "FADY",
   description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates. Rejoins la nouvelle génération de coiffeurs.",
   icons: {
     icon: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png?v=3",
   },
   openGraph: {
-    title: "FADY — L'app pour coiffeurs & barbers nouvelle génération",
+    title: "FADY",
     description: "Trouve un coiffeur quand tu veux, où tu veux. Réservation en salon ou à domicile, disponibilités immédiates.",
     type: "website",
   },

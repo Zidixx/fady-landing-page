@@ -99,7 +99,7 @@ export default function Home() {
                 </svg>
               }
               title="Réservation rapide"
-              description="Réserve en quelques clics, même dans 10 minutes si un coiffeur est disponible."
+              description="Trouve et réserve ton coiffeur en seulement quelques secondes."
             />
             <FeatureCard
               icon={
