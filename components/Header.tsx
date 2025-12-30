@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header 
-      className="sticky md:relative top-0 z-50 relative"
+      className="fixed md:fixed top-0 left-0 right-0 z-[9999] w-full min-h-[80px]"
     >
       {/* Fond dégradé hero sur mobile uniquement */}
       <div 
@@ -24,9 +24,17 @@ export default function Header() {
         }}
       ></div>
       
-      <nav className="container mx-auto px-4 md:px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Mobile: Container avec hauteur fixe */}
-        <div className="flex md:flex items-center justify-between h-16 md:h-auto">
+      {/* Fond transparent sur desktop uniquement - sans flou */}
+      <div 
+        className="hidden md:block absolute inset-0"
+        style={{
+          background: 'transparent',
+        }}
+      ></div>
+      
+      <nav className="container mx-auto px-4 md:px-4 sm:px-6 lg:px-8 relative z-10 py-4 md:py-4">
+        {/* Mobile: Container avec hauteur fixe - Logo à gauche, Burger à droite */}
+        <div className="flex items-center justify-between h-16 md:h-auto">
           {/* Logo en haut à gauche */}
           <div className="flex-shrink-0">
             <Link href="/" className="block hover:opacity-80 transition-opacity">
@@ -89,32 +97,39 @@ export default function Header() {
             </Link>
           </div>
           
+          {/* Mobile Menu Button - Aligné à droite dans le même flex container */}
+          <div className="md:hidden flex-shrink-0">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-fady-purple transition-all hover:bg-white/30"
+              style={{border: "2px solid rgba(188, 49, 252, 0.3)"}}
+              aria-label="Menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+          
           {/* Espace pour équilibrer avec le logo - Caché sur mobile */}
           <div className="hidden md:block flex-shrink-0 w-32"></div>
         </div>
-        
-        {/* Mobile Menu Button - Aligné à droite */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-fady-purple transition-all hover:bg-white/30"
-            style={{border: "2px solid rgba(188, 49, 252, 0.3)"}}
-            aria-label="Menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
 
-        {/* Mobile Menu - Centré avec nouveau style */}
+        {/* Mobile Menu - Overlay + Items centrés */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 flex flex-col items-center space-y-3">
-            <div className="w-full max-w-[360px] space-y-3">
+          <>
+            {/* Overlay */}
+            <div 
+              className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-[-1]"
+              onClick={() => setMobileMenuOpen(false)}
+            ></div>
+            {/* Menu centré */}
+            <div className="md:hidden mt-4 flex flex-col items-center space-y-3 relative z-10">
+              <div className="w-full max-w-[90%] space-y-3">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
@@ -171,8 +186,9 @@ export default function Header() {
               >
                 Contact
               </Link>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>

@@ -9,7 +9,7 @@ export default function UserApp() {
       <div style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
         marginTop: '-80px',
-        paddingTop: '80px',
+        paddingTop: '100px',
       }}>
         {/* Hero Section */}
         <section className="py-8 md:py-12 relative z-10">
@@ -21,9 +21,18 @@ export default function UserApp() {
                   La nouvelle façon<br />
                   de réserver ton coiffeur
                 </h1>
-                <p className="text-lg text-gray-text mb-4 font-medium">
-                  🏠 Salon ou domicile • ⚡ Dispo immédiate • 🚀 Réservation express
-                </p>
+                <div className="text-lg text-gray-text mb-4 font-medium">
+                  {/* Mobile: Chaque feature sur une ligne */}
+                  <div className="md:hidden space-y-2">
+                    <div>🏠 Salon ou domicile</div>
+                    <div>⚡ Dispo immédiate</div>
+                    <div>🚀 Réservation express</div>
+                  </div>
+                  {/* Desktop: Une seule ligne avec séparateurs */}
+                  <div className="hidden md:block">
+                    🏠 Salon ou domicile • ⚡ Dispo immédiate • 🚀 Réservation express
+                  </div>
+                </div>
                 <p className="text-xl text-gray-text mb-8">
                   FADY te connecte aux meilleurs coiffeurs près de toi, en quelques secondes.
                 </p>

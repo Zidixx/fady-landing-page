@@ -10,7 +10,7 @@ export default function ProApp() {
       <div style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
         marginTop: '-80px',
-        paddingTop: '80px',
+        paddingTop: '100px',
       }}>
         {/* Hero Section - Editorial Style */}
         <section className="pt-12 md:pt-16 pb-8 md:pb-12 relative z-10">

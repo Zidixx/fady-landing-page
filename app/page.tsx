@@ -8,8 +8,10 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Premium */}
-      <section className="relative -mt-20 pt-20 pb-20 md:pb-32 lg:pb-40 overflow-hidden min-h-screen" style={{
+      <section className="relative pb-20 md:pb-32 lg:pb-40 overflow-hidden min-h-screen" style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
+        marginTop: '-80px',
+        paddingTop: '100px',
       }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16 lg:pt-20">
           <div className="max-w-7xl mx-auto">

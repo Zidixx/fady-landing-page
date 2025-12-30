@@ -31,8 +31,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative overflow-hidden min-h-screen -mt-20 pt-20" style={{
+    <section className="relative overflow-hidden min-h-screen" style={{
       background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
+      marginTop: '-80px',
+      paddingTop: '100px',
     }}>
       {/* Blobs décoratifs en arrière-plan */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -44,7 +46,7 @@ export default function Contact() {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16 lg:pt-20">
         <div className="max-w-[1100px] mx-auto">
           {/* Grande Card Premium */}
           <div className="relative rounded-[32px] p-8 md:p-12 lg:p-16 overflow-hidden" style={{
