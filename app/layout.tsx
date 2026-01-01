@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VercelAnalytics from "./components/VercelAnalytics";
 
 const uberMove = localFont({
   src: [
@@ -52,6 +53,7 @@ export default function RootLayout({
           <main className="relative">{children}</main>
           <Footer />
         </div>
+        <VercelAnalytics />
       </body>
     </html>
   );
