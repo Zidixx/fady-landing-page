@@ -71,7 +71,7 @@ export default function Header() {
                       }`}
                       style={{border: `2px solid ${pathname === "/user" ? "#BC31FC" : "rgba(188, 49, 252, 0.3)"}`}}
                     >
-                      User
+                      Clients
                     </Link>
                     <Link
                       href="/pro"
@@ -82,7 +82,7 @@ export default function Header() {
                       }`}
                       style={{border: `2px solid ${pathname === "/pro" ? "#BC31FC" : "rgba(188, 49, 252, 0.3)"}`}}
                     >
-                      Pro
+                      Coiffeurs
                     </Link>
             <Link
               href="/contact"
@@ -156,7 +156,7 @@ export default function Header() {
                   border: pathname === "/user" ? "2px solid #BC31FC" : "2px solid transparent"
                 }}
               >
-                User
+                Clients
               </Link>
               <Link
                 href="/pro"
@@ -170,7 +170,7 @@ export default function Header() {
                   border: pathname === "/pro" ? "2px solid #BC31FC" : "2px solid transparent"
                 }}
               >
-                Pro
+                Coiffeurs
               </Link>
               <Link
                 href="/contact"
