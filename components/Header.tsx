@@ -177,7 +177,7 @@ export default function Header() {
                   e.currentTarget.style.background = '#BC31FC';
                 }}
               >
-                Télécharger l'app
+                Télécharger l&apos;app
               </Link>
             </div>
           </div>
