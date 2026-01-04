@@ -202,7 +202,7 @@ export default function ProApp() {
       {/* Premium CTA Section - JoyJam Style */}
       <section className="hidden lg:block pt-8 pb-20 md:pb-28 relative overflow-visible bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto relative">
+          <div className="max-w-6xl mx-auto relative">
             {/* Glassmorphism Card - Plus petite, mockup dépasse */}
             <div 
               className="relative rounded-[32px] overflow-visible"
@@ -212,15 +212,15 @@ export default function ProApp() {
               }}
             >
               <div className="relative p-8 lg:p-10 pr-0 lg:pr-0">
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6 lg:gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-6 lg:gap-8 items-center">
                   {/* Left Column - Text */}
-                  <div className="space-y-6 pr-8 lg:pr-[320px]">
+                  <div className="space-y-6 pr-8 lg:pr-0">
                     <div className="space-y-4">
                       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
-                        Développe ta clientèle et remplis ton planning avec FADY Pro.
+                        Développe ton activité de coiffeur, simplement.
                       </h2>
-                      <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
-                        Une plateforme pensée pour les coiffeurs indépendants et la nouvelle génération.
+                      <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                        FADY Pro te permet de gérer tes réservations, d&apos;attirer de nouveaux clients et de travailler quand tu veux, où tu veux.
                       </p>
                     </div>
                     
@@ -250,8 +250,9 @@ export default function ProApp() {
 
                 {/* iPhone Mockup qui dépasse - Positionné absolument */}
                 <div 
-                  className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-[-5%] z-10"
+                  className="hidden lg:block absolute right-0 top-1/2 z-10"
                   style={{
+                    transform: 'translate(-80px, -55%)',
                     filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.4))',
                   }}
                 >
@@ -259,7 +260,7 @@ export default function ProApp() {
                     <img
                       src="/mockup-pro.png"
                       alt="FADY Pro App Mockup"
-                      className="w-[280px] h-auto"
+                      className="w-[300px] h-auto"
                       style={{ display: 'block' }}
                     />
                   </div>

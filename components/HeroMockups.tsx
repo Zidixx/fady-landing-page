@@ -46,8 +46,8 @@ export default function HeroMockups() {
             {/* Mockup droit */}
             <div className="flex-shrink-0 snap-center">
               <img
-                src="/mockup-user-avis.png"
-                alt="FADY User App - Avis"
+                src="/mockup-map-bdx.png"
+                alt="FADY User App - Map"
                 className="w-[240px] h-auto"
                 style={{display: 'block'}}
               />
@@ -122,8 +122,8 @@ export default function HeroMockups() {
           }}
         >
           <img
-            src="/mockup-user-avis.png"
-            alt="FADY User App - Avis"
+            src="/mockup-map-bdx.png"
+            alt="FADY User App - Map"
             className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto"
             style={{display: 'block'}}
           />
