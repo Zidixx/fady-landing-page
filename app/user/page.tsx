@@ -13,7 +13,7 @@ export default function UserApp() {
         paddingTop: '160px',
       }}>
         {/* Hero Section */}
-        <section className="pt-16 md:pt-20 pb-8 md:pb-12 relative z-10">
+        <section className="pt-16 md:pt-20 pb-0 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
@@ -52,7 +52,7 @@ export default function UserApp() {
       </section>
 
         {/* Section: Choisir son coiffeur avec photos/vidéos */}
-        <section className="py-6 md:py-8 relative z-10">
+        <section className="py-0 relative z-10 -mt-8 md:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
@@ -105,7 +105,7 @@ export default function UserApp() {
       </section>
 
         {/* Section: Choisir son coiffeur avec les avis */}
-        <section className="py-6 md:py-8 relative z-10">
+        <section className="py-0 relative z-10 -mt-8 md:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
