@@ -53,14 +53,6 @@ export default function Footer() {
                 contact@fady-app.fr
               </a>
               <a
-                href="https://wa.me/33761382608"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-fady-purple transition-colors"
-              >
-                +33 7 61 38 26 08
-              </a>
-              <a
                 href="https://wa.me/33623563644"
                 target="_blank"
                 rel="noopener noreferrer"

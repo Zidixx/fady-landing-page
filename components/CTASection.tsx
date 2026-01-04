@@ -1,3 +1,5 @@
+import AppStoreButton from "./AppStoreButton";
+
 interface CTASectionProps {
   title: string;
   description: string;
@@ -17,6 +19,8 @@ export default function CTASection({
   primaryButton,
   secondaryButton,
 }: CTASectionProps) {
+  const isAppStoreButton = primaryButton.text === "Télécharger l'app" || primaryButton.text === "Télécharger l&apos;app";
+  
   return (
     <section className="py-16 section-bg relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -28,14 +32,18 @@ export default function CTASection({
             {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={primaryButton.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-fady-purple text-white rounded-full font-semibold hover:bg-fady-purple-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-            >
-              {primaryButton.text}
-            </a>
+            {isAppStoreButton ? (
+              <AppStoreButton href={primaryButton.href} />
+            ) : (
+              <a
+                href={primaryButton.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-fady-purple text-white rounded-full font-semibold hover:bg-fady-purple-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              >
+                {primaryButton.text}
+              </a>
+            )}
             {secondaryButton && (
               <a
                 href={secondaryButton.href}

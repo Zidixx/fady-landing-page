@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FeatureCard from "@/components/FeatureCard";
 import CTASection from "@/components/CTASection";
+import AppStoreButton from "@/components/AppStoreButton";
 
 export default function UserApp() {
   return (
@@ -9,10 +10,10 @@ export default function UserApp() {
       <div style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
         marginTop: '-80px',
-        paddingTop: '100px',
+        paddingTop: '160px',
       }}>
         {/* Hero Section */}
-        <section className="py-8 md:py-12 relative z-10">
+        <section className="pt-16 md:pt-20 pb-8 md:pb-12 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
@@ -256,15 +257,8 @@ export default function UserApp() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <a
-                      href="https://apps.apple.com/fr/app/fady-coiffure/id6754072839"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-3 bg-white text-fady-purple rounded-full font-bold text-base hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] text-center"
-                    >
-                      Télécharger l&apos;app
-                    </a>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
+                    <AppStoreButton className="text-center" variant="white" />
                     <Link
                       href="/pro"
                       className="px-6 py-3 bg-transparent text-white rounded-full font-bold text-base border-2 border-white/40 hover:border-white/60 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] text-center"

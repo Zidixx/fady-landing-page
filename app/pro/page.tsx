@@ -1,7 +1,9 @@
+import Link from "next/link";
 import FeatureCard from "@/components/FeatureCard";
 import ProTestimonialCard from "@/components/ProTestimonialCard";
 import ProProfilesSection from "@/components/ProProfilesSection";
 import MockupsShowcase from "@/components/MockupsShowcase";
+import AppStoreButton from "@/components/AppStoreButton";
 
 export default function ProApp() {
   return (
@@ -10,10 +12,10 @@ export default function ProApp() {
       <div style={{
         background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
         marginTop: '-80px',
-        paddingTop: '100px',
+        paddingTop: '180px',
       }}>
         {/* Hero Section - Editorial Style */}
-        <section className="pt-12 md:pt-16 pb-8 md:pb-12 relative z-10">
+        <section className="pt-28 md:pt-32 pb-4 md:pb-6 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             {/* H1 */}
@@ -32,15 +34,10 @@ export default function ProApp() {
             </p>
             
             {/* CTA Row */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <a
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2 items-center">
+              <AppStoreButton 
                 href="https://apps.apple.com/fr/app/fady-pro-g%C3%A9rez-vos-clients/id6754292964"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-fady-purple text-white rounded-full text-sm font-semibold hover:bg-fady-purple-dark transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                Télécharger FADY Pro
-              </a>
+              />
               <a
                 href="#profils"
                 className="px-6 py-3 glass-bubble text-fady-purple rounded-full text-sm font-semibold border-2 border-fady-purple/70 hover:border-fady-purple/90 transition-all duration-300 shadow-sm hover:shadow-md"
@@ -157,7 +154,7 @@ export default function ProApp() {
       </section>
 
       {/* Partners / Testimonials */}
-      <section className="py-12 md:py-16 section-bg relative z-10">
+      <section className="pt-6 pb-12 md:pb-16 section-bg relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-black-soft tracking-tight mb-3">
@@ -198,6 +195,77 @@ export default function ProApp() {
             <span className="inline-block px-4 py-2 glass-bubble text-fady-purple-dark text-xs font-medium rounded-full border-2 border-fady-purple/60">
               Bêta — Lancement prochain
             </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium CTA Section - JoyJam Style */}
+      <section className="hidden lg:block pt-8 pb-20 md:pb-28 relative overflow-visible bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto relative">
+            {/* Glassmorphism Card - Plus petite, mockup dépasse */}
+            <div 
+              className="relative rounded-[32px] overflow-visible"
+              style={{
+                background: 'linear-gradient(135deg, #A01ED9 0%, #7B1AB6 30%, #5B1899 70%, #3D0F66 100%)',
+                boxShadow: '0 40px 120px rgba(91, 24, 153, 0.3)',
+              }}
+            >
+              <div className="relative p-8 lg:p-10 pr-0 lg:pr-0">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6 lg:gap-8 items-center">
+                  {/* Left Column - Text */}
+                  <div className="space-y-6 pr-8 lg:pr-[320px]">
+                    <div className="space-y-4">
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                        Développe ta clientèle et remplis ton planning avec FADY Pro.
+                      </h2>
+                      <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
+                        Une plateforme pensée pour les coiffeurs indépendants et la nouvelle génération.
+                      </p>
+                    </div>
+                    
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        href="https://apps.apple.com/fr/app/fady-pro-g%C3%A9rez-vos-clients/id6754292964"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block transition-all duration-300 hover:scale-105 hover:opacity-90"
+                      >
+                        <img
+                          src="/Download-Apple-Blanc.png"
+                          alt="Download on the App Store"
+                          className="h-auto w-auto"
+                          style={{ maxWidth: '180px', height: 'auto', display: 'block' }}
+                        />
+                      </Link>
+                      <div
+                        className="px-8 py-4 bg-transparent text-white rounded-full font-semibold text-base border-2 border-white/40 text-center whitespace-nowrap opacity-0 pointer-events-none select-none"
+                      >
+                        Découvrir FADY PRO
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* iPhone Mockup qui dépasse - Positionné absolument */}
+                <div 
+                  className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-[-5%] z-10"
+                  style={{
+                    filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.4))',
+                  }}
+                >
+                  <div className="relative transform rotate-12">
+                    <img
+                      src="/mockup-pro.png"
+                      alt="FADY Pro App Mockup"
+                      className="w-[280px] h-auto"
+                      style={{ display: 'block' }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

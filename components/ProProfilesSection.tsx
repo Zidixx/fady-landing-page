@@ -19,7 +19,7 @@ interface ProProfilesSectionProps {
 
 export default function ProProfilesSection({ diplome, amateur }: ProProfilesSectionProps) {
   return (
-    <section id="profils" className="py-12 md:py-16 relative z-10">
+    <section id="profils" className="pt-4 md:pt-6 pb-12 md:pb-16 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Bulle unique contenant les deux colonnes */}

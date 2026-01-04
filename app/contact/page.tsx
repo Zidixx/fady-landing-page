@@ -46,7 +46,7 @@ export default function Contact() {
     <section className="relative overflow-hidden min-h-screen" style={{
       background: 'linear-gradient(to bottom, #F8F3FF 0%, #EFE2FF 50%, #FFFFFF 100%)',
       marginTop: '-80px',
-      paddingTop: '100px',
+      paddingTop: '180px',
     }}>
       {/* Blobs décoratifs en arrière-plan */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -58,7 +58,7 @@ export default function Contact() {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16 lg:pt-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-24 lg:pt-28 pb-20 md:pb-24 lg:pb-28">
         <div className="max-w-[1100px] mx-auto">
           {/* Grande Card Premium */}
           <div className="relative rounded-[32px] p-8 md:p-12 lg:p-16 overflow-hidden" style={{
@@ -206,7 +206,7 @@ export default function Contact() {
 
                     {/* WhatsApp */}
                     <a
-                      href="https://wa.me/33761382608"
+                      href="https://wa.me/33623563644"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md group"
@@ -218,8 +218,7 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <div className="text-xs font-medium text-gray-text mb-1">WhatsApp</div>
-                        <div className="text-base font-semibold text-black-soft">+33 7 61 38 26 08</div>
-                        <div className="text-sm text-gray-text mt-1">ou +33 6 23 56 36 44</div>
+                        <div className="text-base font-semibold text-black-soft">+33 6 23 56 36 44</div>
                       </div>
                     </a>
 
