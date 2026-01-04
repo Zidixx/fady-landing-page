@@ -48,7 +48,7 @@ export default function Home() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-row sm:flex-row gap-4 justify-center xl:justify-start pt-2">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start pt-2">
                     <div className="flex justify-center xl:contents">
                       <AppStoreButton />
                     </div>
@@ -263,7 +263,7 @@ export default function Home() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-row sm:flex-row gap-3 pt-2 justify-center items-center">
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
                     <AppStoreButton className="text-center" variant="white" />
                     <Link
                       href="/user"

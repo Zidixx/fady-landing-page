@@ -257,7 +257,7 @@ export default function UserApp() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-row sm:flex-row gap-3 pt-2 justify-center items-center">
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
                     <AppStoreButton className="text-center" variant="white" />
                     <Link
                       href="/pro"

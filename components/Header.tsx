@@ -246,7 +246,7 @@ export default function Header() {
                 href={APPSTORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-full text-xs font-semibold text-white transition-all duration-200 hover:scale-105"
+                className="p-2.5 rounded-full transition-all duration-200 hover:scale-105 flex items-center justify-center"
                 style={{
                   background: '#BC31FC',
                   boxShadow: '0 4px 12px rgba(188, 49, 252, 0.3)',
@@ -258,7 +258,9 @@ export default function Header() {
                   e.currentTarget.style.background = '#BC31FC';
                 }}
               >
-                Télécharger
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
               </Link>
             </div>
           </div>
