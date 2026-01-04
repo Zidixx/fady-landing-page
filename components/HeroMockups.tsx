@@ -85,7 +85,7 @@ export default function HeroMockups() {
           <img
             src="/mockup-user-photos.png"
             alt="FADY User App - Photos"
-            className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto"
+            className="w-full max-w-[280px] md:max-w-[300px] lg:max-w-[320px] h-auto"
             style={{display: 'block'}}
           />
         </div>
@@ -104,7 +104,7 @@ export default function HeroMockups() {
           <img
             src="/mockup-user1.png"
             alt="FADY User App"
-            className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto"
+            className="w-full max-w-[280px] md:max-w-[300px] lg:max-w-[320px] h-auto"
             style={{display: 'block'}}
           />
         </div>
@@ -124,7 +124,7 @@ export default function HeroMockups() {
           <img
             src="/mockup-map-bdx.png"
             alt="FADY User App - Map"
-            className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto"
+            className="w-full max-w-[280px] md:max-w-[300px] lg:max-w-[320px] h-auto"
             style={{display: 'block'}}
           />
         </div>

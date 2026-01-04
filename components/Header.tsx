@@ -50,7 +50,7 @@ export default function Header() {
         <div className="flex items-center justify-center h-16 md:h-auto">
           {/* Desktop Navbar - Glassmorphism Pill (courte, centrée) */}
           <div 
-            className="hidden lg:flex items-center gap-3 px-5 py-3 rounded-full transition-all duration-300 ease-in-out pointer-events-auto"
+            className="hidden lg:flex items-center lg:gap-1.5 xl:gap-3 lg:px-4 xl:px-5 lg:py-2.5 xl:py-3 rounded-full transition-all duration-300 ease-in-out pointer-events-auto"
             style={{
               position: 'fixed',
               top: '48px',
@@ -72,20 +72,20 @@ export default function Header() {
                   alt="FADY Logo" 
                   width={90}
                   height={30}
-                  className="h-7 w-auto"
+                  className="h-6 lg:h-6 xl:h-7 w-auto"
                   priority
                 />
               </Link>
             </div>
             
             {/* Séparateur vertical */}
-            <div className="h-6 w-px bg-white/20"></div>
+            <div className="h-5 lg:h-[22px] xl:h-6 w-px bg-white/20"></div>
             
             {/* Liens centrés en pills */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center lg:gap-0.5 xl:gap-1">
               <Link
                 href="/"
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`lg:px-2.5 xl:px-3.5 lg:py-1 xl:py-1.5 rounded-full lg:text-xs xl:text-sm font-semibold transition-all duration-300 ${
                   pathname === "/"
                     ? "bg-gradient-to-b from-fady-purple/20 to-white/10 text-fady-purple border-2 border-fady-purple shadow-[0_0_20px_rgba(188,49,252,0.35)] hover:shadow-[0_0_25px_rgba(188,49,252,0.45)] hover:scale-105"
                     : "text-black hover:bg-white/20"
@@ -96,7 +96,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/user"
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`lg:px-2.5 xl:px-3.5 lg:py-1 xl:py-1.5 rounded-full lg:text-xs xl:text-sm font-semibold transition-all duration-300 ${
                   pathname === "/user"
                     ? "bg-gradient-to-b from-fady-purple/20 to-white/10 text-fady-purple border-2 border-fady-purple shadow-[0_0_20px_rgba(188,49,252,0.35)] hover:shadow-[0_0_25px_rgba(188,49,252,0.45)] hover:scale-105"
                     : "text-black hover:bg-white/20"
@@ -107,7 +107,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/pro"
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`lg:px-2.5 xl:px-3.5 lg:py-1 xl:py-1.5 rounded-full lg:text-xs xl:text-sm font-semibold transition-all duration-300 ${
                   pathname === "/pro"
                     ? "bg-gradient-to-b from-fady-purple/20 to-white/10 text-fady-purple border-2 border-fady-purple shadow-[0_0_20px_rgba(188,49,252,0.35)] hover:shadow-[0_0_25px_rgba(188,49,252,0.45)] hover:scale-105"
                     : "text-black hover:bg-white/20"
@@ -118,7 +118,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/contact"
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`lg:px-2.5 xl:px-3.5 lg:py-1 xl:py-1.5 rounded-full lg:text-xs xl:text-sm font-semibold transition-all duration-300 ${
                   pathname === "/contact"
                     ? "bg-gradient-to-b from-fady-purple/20 to-white/10 text-fady-purple border-2 border-fady-purple shadow-[0_0_20px_rgba(188,49,252,0.35)] hover:shadow-[0_0_25px_rgba(188,49,252,0.45)] hover:scale-105"
                     : "text-black hover:bg-white/20"
@@ -130,7 +130,7 @@ export default function Header() {
             </div>
             
             {/* Séparateur vertical */}
-            <div className="h-6 w-px bg-white/20"></div>
+            <div className="h-5 lg:h-[22px] xl:h-6 w-px bg-white/20"></div>
             
             {/* Bouton CTA violet à droite */}
             <div className="flex-shrink-0">
@@ -138,7 +138,7 @@ export default function Header() {
                 href={APPSTORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
+                className="lg:px-3 xl:px-4 lg:py-1.5 xl:py-2 rounded-full lg:text-xs xl:text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
                 style={{
                   background: '#BC31FC',
                   boxShadow: '0 4px 12px rgba(188, 49, 252, 0.3)',
@@ -150,7 +150,8 @@ export default function Header() {
                   e.currentTarget.style.background = '#BC31FC';
                 }}
               >
-                Télécharger l&apos;app
+                <span className="hidden lg:inline xl:hidden">Télécharger</span>
+                <span className="hidden xl:inline">Télécharger l&apos;app</span>
               </Link>
             </div>
           </div>

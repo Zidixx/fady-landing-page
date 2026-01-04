@@ -22,9 +22,9 @@ export default function Home() {
                 boxShadow: '0 30px 90px rgba(140, 90, 220, 0.15)',
               }}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-12 xl:gap-16 items-center">
                 {/* Left: Text + CTAs */}
-                <div className="text-center lg:text-left space-y-6">
+                <div className="text-center xl:text-left space-y-6">
                   {/* Small label */}
                   <div className="inline-block mb-4">
                     <span className="text-sm md:text-base font-semibold text-fady-purple bg-fady-purple/10 px-4 py-2 rounded-full">
@@ -38,7 +38,7 @@ export default function Home() {
                   </h1>
                   
                   {/* Editorial text block */}
-                  <div className="text-lg md:text-xl text-gray-text max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-2">
+                  <div className="text-lg md:text-xl text-gray-text max-w-xl mx-auto xl:mx-0 leading-relaxed space-y-2">
                     <p>
                       Trouve le coiffeur qui te correspond, quand tu en as besoin.
                     </p>
@@ -48,11 +48,11 @@ export default function Home() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-row sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                    <div className="flex justify-center lg:contents">
+                  <div className="flex flex-row sm:flex-row gap-4 justify-center xl:justify-start pt-2">
+                    <div className="flex justify-center xl:contents">
                       <AppStoreButton />
                     </div>
-                    <div className="flex justify-center lg:contents">
+                    <div className="flex justify-center xl:contents">
                       <Link
                         href="/user"
                         className="px-8 py-4 bg-white text-fady-purple rounded-full font-semibold border-2 border-fady-purple/70 hover:border-fady-purple hover:bg-fady-purple/5 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1"
@@ -64,13 +64,13 @@ export default function Home() {
                 </div>
 
                 {/* Right: Mockups (desktop) */}
-                <div className="hidden lg:block relative">
+                <div className="hidden xl:block relative">
                   <HeroMockups />
                 </div>
               </div>
 
-              {/* Mobile: Centered mockup */}
-              <div className="lg:hidden flex justify-center mt-12">
+              {/* Mobile/Tablette: Centered mockup */}
+              <div className="xl:hidden flex justify-center mt-16 lg:mt-20">
                 <HeroMockups />
               </div>
             </div>
