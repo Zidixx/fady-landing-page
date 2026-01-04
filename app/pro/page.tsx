@@ -200,7 +200,7 @@ export default function ProApp() {
       </section>
 
       {/* Premium CTA Section - JoyJam Style */}
-      <section className="hidden lg:block pt-8 pb-20 md:pb-28 relative overflow-visible bg-white">
+      <section className="pt-0 pb-20 md:pb-28 relative overflow-visible bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto relative">
             {/* Glassmorphism Card - Plus petite, mockup dépasse */}
@@ -211,10 +211,10 @@ export default function ProApp() {
                 boxShadow: '0 40px 120px rgba(91, 24, 153, 0.3)',
               }}
             >
-              <div className="relative p-8 lg:p-10 pr-0 lg:pr-0">
+              <div className="relative pt-8 px-8 pb-4 lg:p-10 lg:pr-0">
                 <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-6 lg:gap-8 items-center">
                   {/* Left Column - Text */}
-                  <div className="space-y-6 pr-8 lg:pr-0">
+                  <div className="space-y-16 lg:space-y-6 lg:pr-0 text-center lg:text-left">
                     <div className="space-y-4">
                       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
                         Développe ton activité de coiffeur, simplement.
@@ -226,11 +226,29 @@ export default function ProApp() {
                     
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
+                      {/* Mobile: Bouton centré */}
+                      <div className="lg:hidden flex justify-center">
+                        <Link
+                          href="https://apps.apple.com/fr/app/fady-pro-g%C3%A9rez-vos-clients/id6754292964"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block transition-all duration-300 hover:scale-105 hover:opacity-90"
+                        >
+                          <img
+                            src="/Download-Apple-Blanc.png"
+                            alt="Download on the App Store"
+                            className="h-auto w-auto"
+                            style={{ maxWidth: '180px', height: 'auto', display: 'block' }}
+                          />
+                        </Link>
+                      </div>
+                      
+                      {/* Desktop: Bouton normal */}
                       <Link
                         href="https://apps.apple.com/fr/app/fady-pro-g%C3%A9rez-vos-clients/id6754292964"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block transition-all duration-300 hover:scale-105 hover:opacity-90"
+                        className="hidden lg:inline-block transition-all duration-300 hover:scale-105 hover:opacity-90"
                       >
                         <img
                           src="/Download-Apple-Blanc.png"
@@ -239,6 +257,7 @@ export default function ProApp() {
                           style={{ maxWidth: '180px', height: 'auto', display: 'block' }}
                         />
                       </Link>
+                      
                       <div
                         className="px-8 py-4 bg-transparent text-white rounded-full font-semibold text-base border-2 border-white/40 text-center whitespace-nowrap opacity-0 pointer-events-none select-none"
                       >

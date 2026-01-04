@@ -48,14 +48,18 @@ export default function Home() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                    <AppStoreButton />
-                    <Link
-                      href="/user"
-                      className="px-8 py-4 bg-white text-fady-purple rounded-full font-semibold border-2 border-fady-purple/70 hover:border-fady-purple hover:bg-fady-purple/5 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1"
-                    >
-                      Découvrir User / Pro
-                    </Link>
+                  <div className="flex flex-row sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                    <div className="flex justify-center lg:contents">
+                      <AppStoreButton />
+                    </div>
+                    <div className="flex justify-center lg:contents">
+                      <Link
+                        href="/user"
+                        className="px-8 py-4 bg-white text-fady-purple rounded-full font-semibold border-2 border-fady-purple/70 hover:border-fady-purple hover:bg-fady-purple/5 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1"
+                      >
+                        Découvrir FADY
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
@@ -248,7 +252,7 @@ export default function Home() {
 
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center p-8 md:p-12 lg:p-16">
                 {/* Left: Text + CTA */}
-                <div className="text-left space-y-6">
+                <div className="text-center lg:text-left space-y-6">
                   <div className="space-y-4">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                       Prêt à trouver ton coiffeur en quelques secondes ?
@@ -259,7 +263,7 @@ export default function Home() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
+                  <div className="flex flex-row sm:flex-row gap-3 pt-2 justify-center items-center">
                     <AppStoreButton className="text-center" variant="white" />
                     <Link
                       href="/user"
@@ -272,7 +276,7 @@ export default function Home() {
 
                 {/* Right: Mockups */}
                 <div className="relative flex items-center justify-center lg:justify-start">
-                  <div className="relative w-full max-w-md">
+                  <div className="relative w-full max-w-md mx-auto lg:mx-0 -ml-10 lg:ml-0">
                     {/* Mockup 1 - Légèrement incliné à gauche */}
                     <div className="relative transform -rotate-6 translate-y-2 animate-float" style={{
                       filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))',

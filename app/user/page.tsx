@@ -16,7 +16,7 @@ export default function UserApp() {
         <section className="pt-16 md:pt-20 pb-0 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
               <div className="glass-card rounded-3xl p-8 max-w-4xl" style={{border: 'none'}}>
                 <h1 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
                   La nouvelle façon<br />
@@ -52,10 +52,10 @@ export default function UserApp() {
       </section>
 
         {/* Section: Choisir son coiffeur avec photos/vidéos */}
-        <section className="py-0 relative z-10 -mt-8 md:-mt-12">
+        <section className="py-0 relative z-10 mt-2 md:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
               <div className="order-2 lg:order-1">
                 <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
                   <img
@@ -105,10 +105,10 @@ export default function UserApp() {
       </section>
 
         {/* Section: Choisir son coiffeur avec les avis */}
-        <section className="py-0 relative z-10 -mt-8 md:-mt-12">
+        <section className="py-0 relative z-10 mt-2 md:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
               <div>
                 <div className="glass-card rounded-3xl p-8" style={{border: 'none'}}>
                   <h2 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
@@ -246,7 +246,7 @@ export default function UserApp() {
 
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center p-8 md:p-12 lg:p-16">
                 {/* Left: Text + CTA */}
-                <div className="text-left space-y-6">
+                <div className="text-center lg:text-left space-y-6">
                   <div className="space-y-4">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                       Prêt à trouver ton coiffeur en quelques secondes ?
@@ -257,7 +257,7 @@ export default function UserApp() {
                   </div>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
+                  <div className="flex flex-row sm:flex-row gap-3 pt-2 justify-center items-center">
                     <AppStoreButton className="text-center" variant="white" />
                     <Link
                       href="/pro"
@@ -270,7 +270,7 @@ export default function UserApp() {
 
                 {/* Right: Mockups */}
                 <div className="relative flex items-center justify-center lg:justify-start">
-                  <div className="relative w-full max-w-md">
+                  <div className="relative w-full max-w-md mx-auto lg:mx-0 -ml-10 lg:ml-0">
                     {/* Mockup 1 - Légèrement incliné à gauche */}
                     <div className="relative transform -rotate-6 translate-y-2 animate-float" style={{
                       filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))',
