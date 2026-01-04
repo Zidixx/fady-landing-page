@@ -37,8 +37,8 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // URL App Store (à remplacer par l'URL réelle si disponible)
-  const APPSTORE_URL = "https://apps.apple.com";
+  // URL App Store client FADY
+  const APPSTORE_URL = "https://apps.apple.com/fr/app/fady-coiffure/id6754072839";
 
   return (
     <header 
