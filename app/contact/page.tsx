@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function Contact() {
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [messageLength, setMessageLength] = useState(0);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,6 +18,7 @@ export default function Contact() {
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const message = formData.get('message') as string;
+    const company = formData.get('company') as string; // Honeypot
 
     try {
       const response = await fetch('/api/contact', {
@@ -24,7 +26,7 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, company }),
       });
 
       const data = await response.json();
@@ -32,6 +34,7 @@ export default function Contact() {
       if (response.ok && data.ok) {
         setStatus({ type: 'success', message: 'Message envoyé ✅' });
         form.reset();
+        setMessageLength(0);
       } else {
         setStatus({ type: 'error', message: data.error || 'Erreur, réessaie' });
       }
@@ -146,10 +149,27 @@ export default function Contact() {
                       id="message"
                       name="message"
                       required
+                      maxLength={2000}
                       rows={6}
+                      onChange={(e) => setMessageLength(e.target.value.length)}
                       className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-fady-purple focus:outline-none transition-colors bg-white/80 resize-none"
                       placeholder="Votre message..."
                     ></textarea>
+                    <div className="text-xs text-gray-text mt-1 text-right">
+                      {messageLength} / 2000 caractères
+                    </div>
+                  </div>
+
+                  {/* Honeypot anti-spam (champ caché pour les bots) */}
+                  <div style={{ display: 'none' }}>
+                    <label htmlFor="company">Ne pas remplir ce champ</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
                   </div>
 
                   {/* Message de feedback */}
