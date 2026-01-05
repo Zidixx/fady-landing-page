@@ -14,29 +14,26 @@ export default function Contact() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
-    const company = formData.get('company') as string; // Honeypot
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/mzdzqdpp', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify({ name, email, message, company }),
+        body: formData,
       });
 
       const data = await response.json();
 
-      if (response.ok && data.ok) {
-        setStatus({ type: 'success', message: 'Message envoyé ✅' });
+      if (response.ok) {
+        setStatus({ type: 'success', message: 'Message envoyé avec succès ✅' });
         form.reset();
         setMessageLength(0);
       } else {
-        setStatus({ type: 'error', message: data.error || 'Erreur, réessaie' });
+        // Formspree retourne des erreurs dans data.error ou data.errors
+        const errorMessage = data.error || (data.errors && data.errors[0]?.message) || 'Erreur lors de l\'envoi. Veuillez réessayer.';
+        setStatus({ type: 'error', message: errorMessage });
       }
     } catch (error) {
       setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez réessayer.' });
@@ -160,17 +157,21 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Honeypot anti-spam (champ caché pour les bots) */}
-                  <div style={{ display: 'none' }}>
-                    <label htmlFor="company">Ne pas remplir ce champ</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                  </div>
+                  {/* Honeypot anti-spam Formspree (champ caché pour les bots) */}
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    style={{ display: 'none' }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+
+                  {/* Champ hidden pour l'objet de l'email Formspree */}
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nouveau message – FADY"
+                  />
 
                   {/* Message de feedback */}
                   {status.type && (
