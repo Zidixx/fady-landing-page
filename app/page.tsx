@@ -166,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-28 section-bg relative z-10 bg-white">
+      <section className="py-20 md:py-28 lg:pt-12 lg:pb-28 section-bg relative z-10 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black-soft mb-6 tracking-tight">
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* Premium CTA Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden bg-white">
+      <section className="py-16 md:py-20 lg:pt-4 lg:pb-20 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Premium Container - Format horizontal */}

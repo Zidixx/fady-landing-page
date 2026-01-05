@@ -12,151 +12,159 @@ export default function UserApp() {
         marginTop: '-80px',
         paddingTop: '160px',
       }}>
-        {/* Hero Section */}
-        <section className="pt-16 md:pt-20 pb-0 relative z-10">
+        {/* Container global avec bulle pour les 3 mockups */}
+        <section className="pt-16 md:pt-20 pb-8 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
-              <div className="glass-card rounded-3xl p-8 max-w-4xl" style={{border: 'none'}}>
-                <h1 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
-                  La nouvelle façon<br />
-                  de réserver ton coiffeur
-                </h1>
-                <div className="text-lg text-gray-text mb-4 font-medium">
-                  {/* Mobile: Chaque feature sur une ligne */}
-                  <div className="md:hidden space-y-2">
-                    <div>🏠 Salon ou domicile</div>
-                    <div>⚡ Dispo immédiate</div>
-                    <div>🚀 Réservation express</div>
+            {/* Bulle globale qui englobe tout */}
+            <div className="glass-card rounded-[36px] md:rounded-[40px] p-6 md:p-8 lg:p-12" style={{
+              border: 'none',
+              background: 'linear-gradient(to bottom, #FAF6FF 0%, #F8F3FF 100%)',
+              boxShadow: '0 30px 90px rgba(140, 90, 220, 0.15)',
+            }}>
+              {/* Hero Section */}
+              <div className="mb-8 md:mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
+                  <div className="glass-card rounded-3xl p-8 max-w-4xl" style={{border: 'none'}}>
+                    <h1 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
+                      La nouvelle façon<br />
+                      de réserver ton coiffeur
+                    </h1>
+                    <div className="text-lg text-gray-text mb-4 font-medium">
+                      {/* Mobile: Chaque feature sur une ligne */}
+                      <div className="md:hidden space-y-2">
+                        <div>🏠 Salon ou domicile</div>
+                        <div>⚡ Dispo immédiate</div>
+                        <div>🚀 Réservation express</div>
+                      </div>
+                      {/* Desktop: Une seule ligne avec séparateurs */}
+                      <div className="hidden md:block">
+                        🏠 Salon ou domicile • ⚡ Dispo immédiate • 🚀 Réservation express
+                      </div>
+                    </div>
+                    <p className="text-xl text-gray-text mb-8">
+                      FADY te connecte aux meilleurs coiffeurs près de toi, en quelques secondes.
+                    </p>
                   </div>
-                  {/* Desktop: Une seule ligne avec séparateurs */}
-                  <div className="hidden md:block">
-                    🏠 Salon ou domicile • ⚡ Dispo immédiate • 🚀 Réservation express
+                  <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <img
+                      src="/mockup-user1.png"
+                      alt="Mockup User App FADY"
+                      className="w-full h-auto"
+                      style={{display: 'block'}}
+                    />
                   </div>
                 </div>
-                <p className="text-xl text-gray-text mb-8">
-                  FADY te connecte aux meilleurs coiffeurs près de toi, en quelques secondes.
-                </p>
               </div>
-              <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
-                <img
-                  src="/mockup-user1.png"
-                  alt="Mockup User App FADY"
-                  className="w-full h-auto"
-                  style={{display: 'block'}}
-                />
+
+              {/* Séparateur */}
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-fady-purple/20 to-transparent my-6 md:my-8"></div>
+
+              {/* Section: Choisir son coiffeur avec photos/vidéos */}
+              <div className="mb-8 md:mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
+                  <div className="order-2 lg:order-1">
+                    <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
+                      <img
+                        src="/mockup-user-photos.png"
+                        alt="Mockup User App - Photos et Vidéos"
+                        className="w-full h-auto"
+                        style={{display: 'block'}}
+                      />
+                    </div>
+                  </div>
+                  <div className="order-1 lg:order-2">
+                    <div className="glass-card rounded-3xl p-8" style={{border: 'none'}}>
+                      <h2 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
+                        Choisis vraiment ton coiffeur grâce aux photos et vidéos
+                      </h2>
+                      <p className="text-lg text-gray-text mb-4">
+                        Ne laisse plus rien au hasard ! Avec FADY, tu peux découvrir le style et le talent de chaque coiffeur avant de réserver.
+                      </p>
+                      <ul className="space-y-3 text-gray-text mb-6">
+                        <li className="flex items-start">
+                          <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span><strong className="text-black-soft">Portfolio complet</strong> : Parcours les réalisations de chaque coiffeur avec des photos haute qualité de leurs meilleures coupes</span>
+                        </li>
+                        <li className="flex items-start">
+                          <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span><strong className="text-black-soft">Vidéos de démonstration</strong> : Regarde les coiffeurs en action pour voir leur technique et leur approche</span>
+                        </li>
+                        <li className="flex items-start">
+                          <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span><strong className="text-black-soft">Filtres par style</strong> : Trouve le coiffeur parfait selon le type de coupe que tu recherches</span>
+                        </li>
+                      </ul>
+                      <p className="text-gray-text">
+                        Plus besoin de prendre un rendez-vous à l&apos;aveugle. Avec FADY, tu sais exactement à quoi t&apos;attendre avant même de franchir la porte du salon.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Séparateur */}
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-fady-purple/20 to-transparent my-6 md:my-8"></div>
+
+              {/* Section: Choisir son coiffeur avec les avis */}
+              <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
+                  <div>
+                    <div className="glass-card rounded-3xl p-8" style={{border: 'none'}}>
+                      <h2 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
+                        Fais confiance aux avis de la communauté
+                      </h2>
+                      <p className="text-lg text-gray-text mb-4">
+                        La communauté FADY partage ses expériences pour t&apos;aider à faire le bon choix. Chaque avis est vérifié pour garantir leur authenticité.
+                      </p>
+                      <ul className="space-y-3 text-gray-text mb-6">
+                        <li className="flex items-start">
+                          <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span><strong className="text-black-soft">Avis vérifiés</strong> : Tous les avis proviennent de clients qui ont réellement utilisé le service</span>
+                        </li>
+                        <li className="flex items-start">
+                          <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span><strong className="text-black-soft">Notes détaillées</strong> : Consulte les notes sur la ponctualité, le professionnalisme, la qualité de la coupe et l&apos;ambiance</span>
+                        </li>
+                      </ul>
+                      <p className="text-gray-text">
+                        Avec des milliers d&apos;avis authentiques, choisir son coiffeur en toute confiance. La transparence, c&apos;est ça la nouvelle génération de coiffeurs.
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
+                      <img
+                        src="/mockup-user-avis.png"
+                        alt="Mockup User App - Avis clients"
+                        className="w-full h-auto"
+                        style={{display: 'block'}}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-        {/* Section: Choisir son coiffeur avec photos/vidéos */}
-        <section className="py-0 relative z-10 mt-2 md:-mt-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
-                  <img
-                    src="/mockup-user-photos.png"
-                    alt="Mockup User App - Photos et Vidéos"
-                    className="w-full h-auto"
-                    style={{display: 'block'}}
-                  />
-                </div>
-              </div>
-              <div className="order-1 lg:order-2">
-                <div className="glass-card rounded-3xl p-8" style={{border: 'none'}}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
-                    Choisis vraiment ton coiffeur grâce aux photos et vidéos
-                  </h2>
-                  <p className="text-lg text-gray-text mb-4">
-                    Ne laisse plus rien au hasard ! Avec FADY, tu peux découvrir le style et le talent de chaque coiffeur avant de réserver.
-                  </p>
-                  <ul className="space-y-3 text-gray-text mb-6">
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong className="text-black-soft">Portfolio complet</strong> : Parcours les réalisations de chaque coiffeur avec des photos haute qualité de leurs meilleures coupes</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong className="text-black-soft">Vidéos de démonstration</strong> : Regarde les coiffeurs en action pour voir leur technique et leur approche</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong className="text-black-soft">Filtres par style</strong> : Trouve le coiffeur parfait selon le type de coupe que tu recherches</span>
-                    </li>
-                  </ul>
-                  <p className="text-gray-text">
-                    Plus besoin de prendre un rendez-vous à l&apos;aveugle. Avec FADY, tu sais exactement à quoi t&apos;attendre avant même de franchir la porte du salon.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        {/* Section: Choisir son coiffeur avec les avis */}
-        <section className="py-0 relative z-10 mt-2 md:-mt-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 items-center">
-              <div>
-                <div className="glass-card rounded-3xl p-8" style={{border: 'none'}}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-black-soft mb-6">
-                    Fais confiance aux avis de la communauté
-                  </h2>
-                  <p className="text-lg text-gray-text mb-4">
-                    La communauté FADY partage ses expériences pour t&apos;aider à faire le bon choix. Chaque avis est vérifié pour garantir leur authenticité.
-                  </p>
-                  <ul className="space-y-3 text-gray-text mb-6">
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong className="text-black-soft">Avis vérifiés</strong> : Tous les avis proviennent de clients qui ont réellement utilisé le service</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-fady-purple mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong className="text-black-soft">Notes détaillées</strong> : Consulte les notes sur la ponctualité, le professionnalisme, la qualité de la coupe et l&apos;ambiance</span>
-                    </li>
-                  </ul>
-                  <p className="text-gray-text">
-                    Avec des milliers d&apos;avis authentiques, choisir son coiffeur en toute confiance. La transparence, c&apos;est ça la nouvelle génération de coiffeurs.
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="max-w-xs mx-auto transform hover:scale-105 transition-transform duration-300">
-                  <img
-                    src="/mockup-user-avis.png"
-                    alt="Mockup User App - Avis clients"
-                    className="w-full h-auto"
-                    style={{display: 'block'}}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </section>
       </div>
 
       {/* Features Section */}
       <section className="py-12 md:py-16 section-bg relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-black-soft text-center mb-12">
-            Fonctionnalités User App
+            Fonctionnalités App Clients
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
@@ -218,7 +226,7 @@ export default function UserApp() {
       </section>
 
       {/* Premium CTA Section - Identique à la Home */}
-      <section className="py-16 md:py-20 relative overflow-hidden bg-white">
+      <section className="py-16 md:py-20 lg:pt-4 lg:pb-20 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Premium Container - Format horizontal */}
